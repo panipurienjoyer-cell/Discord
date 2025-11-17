@@ -987,6 +987,7 @@ class InfosButton(discord.ui.Button):
 @bot.tree.command(name="set-panel", description="Set the Xecret Hub script panel")
 @is_support_or_admin()
 async def set_panel(interaction: discord.Interaction):
+    await interaction.response.defer()
     embed = discord.Embed(
         title="📄 Xecret Hub | Script Loader!",
         url=website_link,
@@ -1036,7 +1037,7 @@ async def set_panel(interaction: discord.Interaction):
     )
 
     view = PanelView()
-    await interaction.response.send_message(embed=embed, view=view)
+    await interaction.followup.send(embed=embed, view=view)
 
 
 # end

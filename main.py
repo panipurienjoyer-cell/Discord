@@ -101,14 +101,14 @@ banner_gif = "https://i.pinimg.com/originals/e6/da/c1/e6dac1038095d76596e8b1bd96
 # =========================
 # API / Project Keys
 # =========================
-bot_token   = os.getenv("BOT_TOKEN")
-api_key     = os.getenv("API_KEY")
-project_id  = os.getenv("PROJECT_ID")
-keys_json   = os.getenv("KEYS_JSON")
-loader_json = os.getenv("LOADER_JSON")
+bot_token   = os.environ("BOT_TOKEN")
+api_key     = os.environ("API_KEY")
+project_id  = os.environ("PROJECT_ID")
+keys_json   = os.environ("KEYS_JSON")
+loader_json = os.environ("LOADER_JSON")
 
 headers_master_key = {
-    "X-Master-Key": os.getenv("MASTER_KEY")
+    "X-Master-Key": os.environ("MASTER_KEY")
 }
 
 url_project_users     = f"https://api.luarmor.net/v3/projects/{project_id}/users"

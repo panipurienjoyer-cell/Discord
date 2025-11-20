@@ -34,7 +34,7 @@ except ImportError:
 # =========================
 # Environment Setup
 # =========================
-load_dotenv()
+# load_dotenv()
 
 # =========================
 # Event Data Storage
